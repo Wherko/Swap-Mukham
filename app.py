@@ -30,14 +30,11 @@ parser = argparse.ArgumentParser(description="Swap-Mukham Face Swapper")
 parser.add_argument("--out_dir", help="Default Output directory", default=os.getcwd())
 parser.add_argument("--batch_size", help="Gpu batch size", default=32)
 parser.add_argument("--cuda", action="store_true", help="Enable cuda", default=False)
-parser.add_argument(
-    "--colab", action="store_true", help="Enable colab mode", default=False
-)
+
 user_args = parser.parse_args()
 
 ## ------------------------------ DEFAULTS ------------------------------
 
-USE_COLAB = user_args.colab
 USE_CUDA = user_args.cuda
 DEF_OUTPUT_PATH = user_args.out_dir
 BATCH_SIZE = int(user_args.batch_size)
